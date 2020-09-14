@@ -273,9 +273,9 @@ datadog:
   ## The dd-agent supports many environment variables
   ## ref: https://docs.datadoghq.com/agent/docker/?tab=standard#environment-variables
   #
-  env:
-    - name: "DD_KUBELET_TLS_VERIFY"
-      value: "false"
+  env: []
+  #   - name: <ENV_VAR_NAME>
+  #     value: <ENV_VAR_VALUE>
 
   ## @param confd - list of objects - optional
   ## Provide additional check configurations (static and Autodiscovery)
@@ -1071,10 +1071,7 @@ agents:
   ## @param tolerations - array - optional
   ## Allow the DaemonSet to schedule on tainted nodes (requires Kubernetes >= 1.6)
   #
-  tolerations:
-  - key: node-role.kubernetes.io/master
-    effect: NoSchedule
-
+  tolerations: []
 
   ## @param nodeSelector - object - optional
   ## Allow the DaemonSet to schedule on selected nodes
