@@ -273,9 +273,9 @@ datadog:
   ## The dd-agent supports many environment variables
   ## ref: https://docs.datadoghq.com/agent/docker/?tab=standard#environment-variables
   #
-  env: []
-    - name: DD_KUBELET_TLS_VERIFY 
-      value: false
+  env:
+    - name: "DD_KUBELET_TLS_VERIFY"
+      value: "false"
 
   ## @param confd - list of objects - optional
   ## Provide additional check configurations (static and Autodiscovery)
